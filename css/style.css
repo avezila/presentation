@@ -63,7 +63,7 @@ scroll_bar {
     height: 28px;
     width: 20px;
     position: absolute;
-    background-image: url(img/controll_icons.png);
+    background-image: url(../img/controll_icons.png);
     top: 50%; }
 
 scroll_bar:hover {
@@ -122,5 +122,3 @@ slide {
   background-color: white;
   padding: 10px;
   display: block; }
-
-/*# sourceMappingURL=style.css.map */

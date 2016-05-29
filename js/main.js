@@ -1,5 +1,24 @@
 var md = "# Dillinger\n\nDillinger is a cloud-enabled, mobile-ready, offline-storage, AngularJS powered HTML5 Markdown editor.\n\n  - Type some Markdown on the left\n  - See HTML in the right\n  - Magic\n\nYou can also:\n  - Import and save files from GitHub, Dropbox, Google Drive and One Drive\n  - Drag and drop files into Dillinger\n  - Export documents as Markdown, HTML and PDF\n\nMarkdown is a lightweight markup language based on the formatting conventions that people naturally use in email.  As [John Gruber] writes on the [Markdown site][df1]\n";
 
+
+
+var Main = (function() {
+    function Main() {
+        this.workspace = new Workspace();
+        this.loader = new Loader();
+
+        this.loader.Import("md/example.md", function() {
+            console.log(this.loader.file["md/example.md"]);
+        });
+    }
+
+    return Main
+})();
+
+
+var main = new Main();
+
+
 (function() {
     var count = 3;
     var now = 0;
