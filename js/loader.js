@@ -1,20 +1,23 @@
 var Loader = (function() {
+    var github = "https://raw.githubusercontent.com/";
+
     function Loader() {
-        this.file = {};
+        this.files = {};
     }
 
-    Loader.prototype.Import = function(file, cb) {
+    Loader.prototype.ImportGit = function(file, cb) {
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', file,true);
+        xhr.open('GET', github + file, true);
         xhr.send();
         xhr.onreadystatechange = function() {
+            if (xhr.readyState != 4) return;
             if (xhr.status != 200) {
-                alert(xhr.status + ': ' + xhr.statusText);
+                cb(null, xhr.status + ': ' + xhr.statusText);
             } else {
-                this.file[file] = xhr.responseText; // responseText -- текст ответа.
+                this.files[file] = xhr.responseText;
+                cb(this.files[file]);
             }
-            cb();
-        }
+        }.bind(this);
     }
 
     return Loader;
