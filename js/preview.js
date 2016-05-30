@@ -1,5 +1,5 @@
 var Preview = (function() {
-    var maxScale = 3;
+    var maxScale = 10;
     var maxWidth = 600;
 
     function Preview(parentDiv) {
@@ -48,6 +48,7 @@ var Preview = (function() {
         }.bind(this, node.name);
         this.clickbinds.push(onclick);
         node.div.addEventListener("click", onclick);
+        node.div.classList.add("shadow");
     }
     Preview.prototype.Resize = function() {
         var ow = this.dom.offsetWidth - 60;
@@ -65,8 +66,8 @@ var Preview = (function() {
             node.div.style.width = width + "px";
             node.div.style.height = height + "px";
             node.slide.dom_content.style.transform = " scale(" + width / node.slide.width + ")";
-            node.slide.dom.style.left = 50  + "%";
-            node.slide.dom.style.transform = "translateX( -50% ) translateY( " + (-50 ) + "% )";
+            node.slide.dom.style.left = 50 + "%";
+            node.slide.dom.style.transform = "translateX( -50% ) translateY( " + (-50) + "% )";
         }
     }
 
