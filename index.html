@@ -6,39 +6,38 @@
     <title> yandex presentation </title>
 
     <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/workspace.css">
+    <link rel="stylesheet" type="text/css" href="css/presentation.css">
+    <link rel="stylesheet" type="text/css" href="css/slide.css">
+    <link rel="stylesheet" type="text/css" href="css/preview.css">
     <link rel="stylesheet" type="text/css" href="css/lib/markdown.css">
 </head>
 
 <body>
     <header>
-        <header_container>
-            <header_button id="play">Play</header_button>
-            <header_button class="right">New +</header_button>
-            <header_button class="right">Export</header_button>
-            <header_button class="right">Import</header_button>
-        </header_container>
+        <div class="header__container">
+            <div class="header__button header__button-play">Play</div>
+            <div class="header__button header__button-new header__button-right">New +</div>
+            <div class="header__button header__button-export header__button-right">Export</div>
+            <div class="header__button header__button-import header__button-right">Import</div>
+        </div>
     </header>
     <content>
-        <slide-box>
-            <slide class="markdown-body">
-                <textarea></textarea>
-            </slide>
-        </slide-box>
-        <slide-box class="r2">
-            <slide>Text2</slide>
-        </slide-box>
-        <slide-box class="r3">
-            <slide>Text3</slide>
-        </slide-box>
+        <preview>
+        </preview>
+        <presentation>
+            <div class="presentation__content">
+            </div>
+            <div class="presentation__scroll_bar presentation__scroll_bar-left">
+                <div></div>
+            </div>
+            <div class="presentation__scroll_bar presentation__scroll_bar-right">
+                <div></div>
+            </div>
+        </presentation>
     </content>
-    <scroll_bar class="scroll_bar--right">
-        <div></div>
-    </scroll_bar>
-    <scroll_bar class="scroll_bar--left">
-        <div></div>
-    </scroll_bar>
-
 </body>
 
 <script type="text/javascript" src="js/lib/marked.js"></script>
@@ -47,7 +46,8 @@
 <script type="text/javascript" src="js/presentation.js"></script>
 <script type="text/javascript" src="js/loader.js"></script>
 <script type="text/javascript" src="js/workspace.js"></script>
+<script type="text/javascript" src="js/header.js"></script>
+<script type="text/javascript" src="js/preview.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
-<script type="text/javascript" src="js/old.js"></script>
 
 </html>

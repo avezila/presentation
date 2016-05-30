@@ -1,0 +1,40 @@
+@import './mixins';
+
+header {
+    @include box;
+    position: fixed;
+    height: $HeaderH;
+    line-height: $HeaderH;
+    
+    width: 100%;
+    background: $blue;
+    z-index: 100;
+    color: white;
+}
+
+.header__container {
+    @include box;
+    width : 900px;
+    margin-left : 50%;
+    transform: translateX(-50%);
+    max-width : 100%;
+}
+
+.header__button {
+    font-weight: bold;
+    cursor : pointer;
+    @include box;
+    padding :  0 20px;
+}
+
+.header__button:hover {
+    background-color : $blueH; 
+}
+
+.header__button-right {
+    float : right;
+}
+
+.fullscreen header {
+    display : none;
+}

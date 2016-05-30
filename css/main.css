@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  font-family: Tahoma,sans-serif,Arial,Helvetica;
+  background-color: #e7ebf0; }
+
+content {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  position: fixed;
+  height: 100%;
+  padding-top: 48px; }
+
+.fullscreen content {
+  padding-top: 0;
+  background-color: black; }

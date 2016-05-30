@@ -1,0 +1,12 @@
+
+$HeaderH : 48px;
+$blue :  #5682a3;
+$blueH : #497799;
+$grey :  #e7ebf0;
+
+
+@mixin box {
+    display: inline-block;
+    box-sizing: border-box;
+}
+
