@@ -14,17 +14,15 @@ slide {
   width: 100%;
   background-color: white;
   padding: 10px;
-  display: block; }
+  display: block;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
 
 .fullscreen slide {
   padding: 0px; }
 
 .shadow slide {
   padding: 40px; }
-
-.shadow .slide__content {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
 
 .shadow .slide__content:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }

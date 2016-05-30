@@ -1,5 +1,5 @@
 var Preview = (function() {
-    var maxScale = 10;
+    var maxScale = 4;
     var maxWidth = 600;
 
     function Preview(parentDiv) {
@@ -54,9 +54,9 @@ var Preview = (function() {
         var ow = this.dom.offsetWidth - 60;
         var n = Math.floor(ow / (this.maxWidth / this.maxScale));
         if (n > this.nodes.length) n = this.nodes.length;
-        if ((n > 2) && (n > (this.nodes.length / 2))) {
-            n = Math.ceil(this.nodes.length / 2);
-        }
+        //if ((n > 2) && (n > (this.nodes.length / 2))) {
+        //    n = Math.ceil(this.nodes.length / 2);
+        //}
         console.log(n, this.maxWidth, ow);
         var width = ow / n;
         //if (n == this.nodes.length && (width > maxWidth)) width = maxWidth;
