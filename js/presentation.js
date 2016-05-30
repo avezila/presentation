@@ -20,7 +20,8 @@ var Presentation = (function() {
         this.scrollRight = this.scrollRight.bind(this);
         this.onKeydown = this.onKeydown.bind(this);
         this.onDblclick = this.onDblclick.bind(this);
-
+        this.onEnterFullscreen = this.onEnterFullscreen.bind(this);
+        this.onExitFullscreen = this.onExitFullscreen.bind(this);
     }
     Presentation.prototype.Src = function(name, src) {
         if (m = src.match(/^\/{4}title (.*)$/m)) {
@@ -124,6 +125,7 @@ var Presentation = (function() {
         this.dom_content.style.left = -100 * this.now + "%";
     }
 
+
     Presentation.prototype.scrollRight = function() {
         this.clearSelection();
         if (this.now >= (this.slides.length - 1)) return;
@@ -144,11 +146,17 @@ var Presentation = (function() {
     }
 
     Presentation.prototype.onEnterFullscreen = function() {
-        document.body.classList.add('fullscreen')
+        document.body.getElementsByTagName("content")[0].classList.add('fullscreen');
+        document.body.getElementsByTagName("header")[0].classList.add('fullscreen');
+        console.log("add");
+        this.dom_content.addEventListener("click", this.scrollRight);
     }
 
     Presentation.prototype.onExitFullscreen = function() {
-        document.body.classList.remove('fullscreen')
+        document.body.getElementsByTagName("content")[0].classList.remove('fullscreen');
+        document.body.getElementsByTagName("header")[0].classList.remove('fullscreen');
+        //document.body.classList.remove('fullscreen');
+        this.dom_content.removeEventListener("click", this.scrollRight);
     }
 
     Presentation.prototype.toggleFullscreen = function() {

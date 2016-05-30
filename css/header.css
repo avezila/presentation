@@ -30,5 +30,5 @@ header {
 .header__button-right {
   float: right; }
 
-.fullscreen header {
+header.fullscreen {
   display: none; }

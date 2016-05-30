@@ -16,6 +16,6 @@ content {
   height: 100%;
   padding-top: 48px; }
 
-.fullscreen content {
+content.fullscreen {
   padding-top: 0;
   background-color: black; }

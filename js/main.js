@@ -1,5 +1,5 @@
 var Demo = "avezila/presentation/gh-pages/md/example.md";
-var Demo = "avezila/presentation/gh-pages/md/example2.md";
+var Demo2 = "avezila/presentation/gh-pages/md/example2.md";
 
 var KeyLeft = 37,
     KeyRight = 39,

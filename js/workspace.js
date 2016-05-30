@@ -7,6 +7,8 @@ var Workspace = (function() {
         this.loader = new Loader();
         this.presentations = {};
         this.Preview();
+        this.onKeydown = this.onKeydown.bind(this);
+        window.addEventListener("keydown", this.onKeydown, false);
     }
 
     Workspace.prototype.ImportGit = function(git, cb) {
@@ -17,8 +19,10 @@ var Workspace = (function() {
             err = pres.Src(git, src);
             if (err) return cb(null, err);
             this.presentations[git] = pres;
-            if (this.state == "preview")
-                this.Preview();
+            if (this.state == "preview") {
+                this.preview.Push([git, pres.slides[0]]);
+                this.preview.Resize();
+            }
 
         }.bind(this));
     }
@@ -63,5 +67,23 @@ var Workspace = (function() {
                 break;
         }
     }
+    Workspace.prototype.onKeydown = function(e) {
+        e = e || window.event;
+        e = e.keyCode || e.which
+
+        switch (e) {
+            case KeyEsc:
+                switch (this.state) {
+                    case "previewSlides":
+                        this.Preview();
+                        break;
+                    case "presentation":
+                        this.PreviewSlides(this.state_data);
+                        break;
+                }
+                break;
+        }
+    }
+
     return Workspace;
 })();
