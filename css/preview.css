@@ -26,15 +26,31 @@ preview {
   top: 0;
   left: 0; }
 
-/*
-.preview__node:hover .preview__node_hover {
-    background-color: rgba(0,0,0,0.05);    
-}
+.preview__node_title {
+  white-space: nowrap;
+  display: inline-block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 17px;
+  height: 20px;
+  font-weight: bold;
+  font-size: 0.9em;
+  color: #444;
+  line-height: 20px; }
 
-.card-1 {
-  
-}
-
-.card-1:hover {
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-}*/
+.preview__node_href {
+  white-space: nowrap;
+  display: inline-block;
+  box-sizing: border-box;
+  position: absolute;
+  padding: 0 20px;
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+  font-weight: bold;
+  font-size: 0.8em;
+  color: #444;
+  height: 20px;
+  line-height: 20px; }

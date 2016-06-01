@@ -25,11 +25,17 @@ var Preview = (function() {
         window.addEventListener("resize", this.Resize, false);
     }
     Preview.prototype.Push = function(slide) {
+        console.log(slide);
         var node = {
             div: document.createElement("div"),
             name: slide[0],
-            slide: slide[1]
+            slide: slide[1],
+            title: slide[2],
+            href: slide[3]
         };
+        this.nodes.push(node);
+        this.dom.appendChild(node.div);
+
         if (node.slide.width > this.maxWidth) {
             this.maxWidth = node.slide.width;
         }
@@ -37,18 +43,33 @@ var Preview = (function() {
             this.maxHeight = node.slide.height;
         }
         node.div.classList.add("preview__node");
-        this.nodes.push(node);
+        node.div.classList.add("shadow");
+
         var hover = document.createElement("div");
         hover.classList.add('preview__node_hover');
         node.div.appendChild(hover);
+
+
         node.div.appendChild(node.slide.dom);
-        this.dom.appendChild(node.div);
+        if (node.title) {
+            var title = document.createElement("div");
+            title.classList.add("preview__node_title");
+            title.innerHTML = node.title;
+            node.div.appendChild(title);
+        }
+        if (node.href) {
+            var href = document.createElement("div");
+            href.classList.add("preview__node_href");
+            href.innerHTML = node.href;
+            node.div.appendChild(href);
+        }
+
         var onclick = function(name) {
             this.cb(name);
         }.bind(this, node.name);
         this.clickbinds.push(onclick);
+
         node.div.addEventListener("click", onclick);
-        node.div.classList.add("shadow");
     }
     Preview.prototype.Resize = function() {
         var ow = this.dom.offsetWidth - 60;

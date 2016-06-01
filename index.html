@@ -18,36 +18,62 @@
 <body>
     <header>
         <div class="header__container">
-            <div class="header__button header__button-play">Play</div>
+            <div class="header__nav">
+                <div class="header__nav_text header__nav-workspace">Workspace</div>
+            </div>
+            <div class="header__nav header__nav-hidden">
+                <div class="header__nav_sep"></div>
+                <div class="header__nav_text header__nav-presentation">Example 1</div>
+            </div>
+            <div class="header__nav header__nav-hidden">
+                <div class="header__nav_sep"></div>
+                <div class="header__nav_text header__nav-slide">Slide 1</div>
+            </div>
             <div class="header__button header__button-new header__button-right">New +</div>
-            <div class="header__button header__button-export header__button-right">Export</div>
-            <div class="header__button header__button-import header__button-right">Import</div>
+            <div class="header__drop header__button-right">
+                <div class="header__drop_title">Export</div>
+                <div class="header__drop_list">
+                    <a href="#" class="header__drop_item" id="header__file_save">Save as file</a>
+                    <div class="header__drop_item ">Push to git</div>
+                </div>
+            </div>
+            <div class="header__drop header__button-right">
+                <div class="header__drop_title">Import</div>
+                <div class="header__drop_list">
+                    <div class="header__drop_item">
+                        From local file
+                        <input class="header__input" type="file" id="header__file_open" name="files[]" multiple />
+                    </div>
+                    <div class="header__drop_item ">From git</div>
+                </div>
+            </div>
+            <div class="header__button header__button-play header__button-right ">Play</div>
         </div>
     </header>
     <content>
         <preview>
         </preview>
         <presentation>
-            <div class="presentation__content">
+            <div class="presentation__content ">
             </div>
-            <div class="presentation__scroll_bar presentation__scroll_bar-left">
+            <div class="presentation__scroll_bar presentation__scroll_bar-left ">
                 <div></div>
             </div>
-            <div class="presentation__scroll_bar presentation__scroll_bar-right">
+            <div class="presentation__scroll_bar presentation__scroll_bar-right ">
                 <div></div>
             </div>
         </presentation>
     </content>
 </body>
 
-<script type="text/javascript" src="js/lib/marked.js"></script>
-<script type="text/javascript" src="js/lib/bigscreen.js"></script>
-<script type="text/javascript" src="js/slide.js"></script>
-<script type="text/javascript" src="js/presentation.js"></script>
-<script type="text/javascript" src="js/loader.js"></script>
-<script type="text/javascript" src="js/workspace.js"></script>
-<script type="text/javascript" src="js/header.js"></script>
-<script type="text/javascript" src="js/preview.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript " src="js/lib/marked.js "></script>
+<script type="text/javascript " src="js/lib/bigscreen.js "></script>
+<script type="text/javascript " src="js/slide.js "></script>
+<script type="text/javascript " src="js/presentation.js "></script>
+<script type="text/javascript " src="js/loader.js "></script>
+<script type="text/javascript " src="js/workspace.js "></script>
+<script type="text/javascript " src="js/header.js "></script>
+<script type="text/javascript " src="js/preview.js "></script>
+<script type="text/javascript " src="js/main.js "></script>
 
 </html>

@@ -20,6 +20,12 @@ var Slide = (function() {
     Slide.prototype.Render = function() {
         this.dom_content.innerHTML = marked(this.md);
     }
-
+    Slide.prototype.Export = function() {
+        var src = "";
+        var md = this.md.replace(/^[\s\n\r]+/, "");
+        md = md.replace(/[\s\n\r]+$/, "");
+        src += md + "\n\n";
+        return src;
+    }
     return Slide;
 })();

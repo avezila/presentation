@@ -18,6 +18,101 @@ header {
   transform: translateX(-50%);
   max-width: 100%; }
 
+.header__nav {
+  display: inline-block;
+  box-sizing: border-box;
+  font-weight: bold; }
+
+.header__nav-hidden {
+  display: none; }
+
+.header__nav_text-active:hover {
+  cursor: pointer;
+  text-decoration: underline; }
+
+.header__nav_text {
+  padding: 0 10px;
+  display: inline-block;
+  box-sizing: border-box; }
+
+.header__nav_sep {
+  display: inline-block;
+  width: 11px;
+  height: 19px;
+  vertical-align: text-top;
+  opacity: 0.8;
+  background-image: url(../img/iconset.png);
+  background-repeat: no-repeat;
+  background-position: -15px -835px;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
+.header__drop {
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative; }
+
+.header__drop:hover {
+  color: #5682a3;
+  background: white; }
+
+.header__drop_icon {
+  display: inline-block;
+  width: 11px;
+  height: 19px;
+  vertical-align: text-top;
+  opacity: 0.8;
+  background-image: url(../img/iconset.png);
+  background-repeat: no-repeat;
+  background-position: -15px -835px; }
+
+.header__drop_title {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0 10px; }
+
+.header__drop_list {
+  display: inline-block;
+  box-sizing: border-box;
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  color: #5682a3;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+.header__drop:hover .header__drop_list {
+  display: block; }
+
+.header__drop_item {
+  white-space: nowrap;
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
+  padding: 0 20px;
+  text-decoration: none;
+  color: #5682a3; }
+
+.header__drop_item:hover {
+  text-decoration: underline; }
+
+.header__input {
+  display: inline-block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer; }
+
 .header__button {
   font-weight: bold;
   cursor: pointer;
@@ -26,7 +121,8 @@ header {
   padding: 0 20px; }
 
 .header__button:hover {
-  background-color: #497799; }
+  color: #5682a3;
+  background: white; }
 
 .header__button-right {
   float: right; }

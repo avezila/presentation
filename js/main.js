@@ -16,13 +16,8 @@ var Main = (function() {
 
         this.workspace = new Workspace(this);
 
-        this.workspace.ImportGit(Demo, function(ret, err) {
-            console.log(ret, err);
-        });
-
-        this.workspace.ImportGit(Demo2, function(ret, err) {
-            console.log(ret, err);
-        });
+        this.workspace.ImportGit(Demo);
+        this.workspace.ImportGit(Demo2);
     }
 
     return Main
